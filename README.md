@@ -1,46 +1,54 @@
 # aq30m
 
-** Todos casos de testes tem:
-*** um modelo de 70% e teste de 30%
+> Nestes testes, foi separado um modelo de 70% do conhecimento e o resto de 30% para ser classificado
 
-teste1 : 
-* Utiliza o conhecimento_filtrado:
-* Melhores colunas para o modelo
+## Bateria de teste para classificação em massa:
+- Teste1 - Conhecimento completo e colunas selecionadas
+    - Acertos: 94644/116565 (81%)
+- Teste2 - Conhecimento completo e TODAS colunas
+    - Acertos: 102985/116565 (88%)
+- Teste3 - Conhecimento gerado com AAS(amostra aleatoria simples) e colunas selecionadas
+    -  Acertos: 100422/116565 (86%)
+- Teste4 - Conhecimento gerado com AAS(amostra aleatoria simples) e TODAS colunas
+    - Acertos: 107998/116565 (92%)
 
-* Resultado:
-* Acertos: 19734/21497 (91%)
+## Bateria de teste para classificação de uma passagem aleatória:
+- Teste5 - Conhecimento completo e colunas selecionadas
+    - Acertos: 320/930 (34%)
+LS82210672017205
+- Teste6 - Conhecimento completo e TODAS colunas
+    - Acertos: 3099/3203 (96%)
+LS82210672016347
+- Teste7 - Conhecimento gerado com AAS(amostra aleatoria simples) e colunas selecionadas
+    - Acertos: 3009/4610 (65%)
+LS82210742017317
+- Teste8 - Conhecimento gerado com AAS(amostra aleatoria simples) e TODAS colunas
+    - Acertos: 6946/7645 (90%)
+LS82210742016283
+- Teste9 - Conhecimento do trimestre historico com todas orb_pto
+    - Acertos: 778/1410 (55%)
+LS82210672016123
+- Teste10 - Conhecimento trimestre historico da mesma orb_pto
+    - Acertos: 3287/4444 (73%)
+    LS82210742016315
+## Bateria de teste para classificação de uma passagem de cada orb_pto:
+> Escolhido a primeira e última de cada:
+> 226_070 -> ['LS82260702016078', 'LS82260702017256']
+> 221_070 -> ['LS82210702016059', 'LS82210702017269']
+> 221_067 -> ['LS52210672002068', 'LS82210672017285']
+> 221_074 -> ['LS82210742016059', 'LS82210742018128']
 
-teste2 : 
-* Utiliza o conhecimento_filtrado:
-* Todas colunas disponíveis
+- Teste11 - Conhecimento completo e colunas selecionadas
+- Teste12 - Conhecimento completo e TODAS colunas
+- Teste13 - Conhecimento gerado com AAS(amostra aleatoria simples) e colunas selecionadas
+- Teste14 - Conhecimento gerado com AAS(amostra aleatoria simples) e TODAS colunas
+- Teste15 - Conhecimento do trimestre historico com todas orb_pto
+- Teste16 - Conhecimento trimestre historico da mesma orb_pto
 
-* Resultado:
-* Acertos: 20651/21497 (96%)
+Obs:
+> Gerar matriz de confusão para cada teste
 
-
-teste3 : 
-* Utiliza o conhecimento_filtrado, quantidade de verifica 1 e 3 iguais:
-* Melhores colunas para o modelo
-
-* Resultado:
-* Acertos: 20336/21497 (94%)
-
-
-teste4 : 
-* Utiliza o conhecimento_filtrado, quantidade de verifica 1 e 3 iguais:
-* Todas colunas disponíveis
-
-* Resultado:
-* Acertos: 21104/21497 (98%)
-
-
+## TODO
 - Gerar uma amostra de 1000
 - Pegar esta amostra e remove-la do conhecimento
 - Limpar tag verifica
-- Bateria de teste com conhecimentos diferentes(todos conhecimentos sem a amostra atual avaliada):
--- Conhecimento completo e colunas selecionadas - ok
--- Conhecimento completo e TODAS colunas - ok
--- Conhecimento gerado com AAS(amostra aleatoria simples) e colunas selecionadas - ok
--- Conhecimento gerado com AAS(amostra aleatoria simples) e TODAS colunas - ok
--- Conhecimento trimestre historico
-- Gerar matriz de confusão para cada teste
