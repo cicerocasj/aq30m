@@ -8,14 +8,14 @@ teste1 :
 * Melhores colunas para o modelo
 
 * Resultado:
-* Acertos: 19960/21497 (92%)
+* Acertos: 19734/21497 (91%)
 
 teste2 : 
 * Utiliza o conhecimento_filtrado:
 * Todas colunas disponíveis
 
 * Resultado:
-* Acertos: 20639/21497 (96%)
+* Acertos: 20651/21497 (96%)
 
 
 teste3 : 
