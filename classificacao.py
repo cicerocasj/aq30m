@@ -17,6 +17,10 @@ from sklearn.metrics import accuracy_score
 class_names = ['queimada','não queimada']
 colunas_stats = ['ndvi', 'nbrl', 'dif_ndvi', 'dif_dnbrl', 'medianb2', 'medianb3', 'medianb4', 'medianb5', 'medianb6', 'medianb7']
 
+def teste_30_ids(df_conhecimento):
+    parte_30 = int((len(df_conhecimento)/100)*30)
+    return np.random.choice(df_conhecimento.id, parte_30, replace=False) 
+
 def get_melhores_colunas(df_rank):
     label_grupo_bom = df_rank[df_rank[1]==df_rank[1].max()].labels.values[0]
     melhores_colunas = df_rank[df_rank['labels']==label_grupo_bom][0]
