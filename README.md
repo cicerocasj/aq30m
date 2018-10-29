@@ -31,19 +31,6 @@ LS82210672016123
 - Teste10 - Conhecimento trimestre historico da mesma orb_pto
     - Acertos: 3287/4444 (73%)
     LS82210742016315
-## Bateria de teste para classificação de uma passagem de cada orb_pto:
-> Escolhido a primeira e última de cada:
-> 226_070 -> ['LS82260702016078', 'LS82260702017256']
-> 221_070 -> ['LS82210702016059', 'LS82210702017269']
-> 221_067 -> ['LS52210672002068', 'LS82210672017285']
-> 221_074 -> ['LS82210742016059', 'LS82210742018128']
-
-- Teste11 - Conhecimento completo e colunas selecionadas
-- Teste12 - Conhecimento completo e TODAS colunas
-- Teste13 - Conhecimento gerado com AAS(amostra aleatoria simples) e colunas selecionadas
-- Teste14 - Conhecimento gerado com AAS(amostra aleatoria simples) e TODAS colunas
-- Teste15 - Conhecimento do trimestre historico com todas orb_pto
-- Teste16 - Conhecimento trimestre historico da mesma orb_pto
 
 Obs:
 > Gerar matriz de confusão para cada teste
