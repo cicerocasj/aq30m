@@ -78,13 +78,12 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     
 def classifica(modelo, teste, melhores_colunas=[]):
-    print('Criando classificador RF')
-    rf_clas = RandomForestClassifier(n_jobs=8, n_estimators=100, max_features=5, random_state=0, max_depth=3, min_samples_split=5)
-    rf_clas.fit(modelo[colunas_stats], modelo.verifica)
-    
     if not melhores_colunas:
         df_rank = get_rank(modelo)
         melhores_colunas = get_melhores_colunas(df_rank)
+    print('Criando classificador RF')
+    rf_clas = RandomForestClassifier(n_jobs=8, n_estimators=100, max_features=5, random_state=0, max_depth=3, min_samples_split=5)
+    rf_clas.fit(modelo[melhores_colunas], modelo.verifica)
     
     print('RF - Classifica dado usando as colunas', melhores_colunas)
     rf_clas = RandomForestClassifier(n_jobs=8, n_estimators=100, max_features=len(melhores_colunas), random_state=0, max_depth=3, min_samples_split=5)
